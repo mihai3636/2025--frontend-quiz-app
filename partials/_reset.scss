@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+td,
+th {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  -webkit-appearance: none;
+  color: inherit;
+  font: inherit;
+  background: none;
+  border: none;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}

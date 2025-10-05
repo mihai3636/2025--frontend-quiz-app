@@ -1,0 +1,82 @@
+/* Typography Scale */
+/*  
+  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/* ******************** */
+/* Spaces */
+/* ******************** */
+/* 
+  2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+@use "./utils" as *;
+
+$bp-tablet: toRem(690px);
+$bp-desktop: toRem(800px);
+// $bp-desktop-2: toRem(920px);
+
+:root {
+  --clr-primary: hsl(172, 67%, 45%);
+
+  --clr-white: #fff;
+  --clr-black: #000;
+
+  --clr-grey-1: #e6e5ea;
+  --clr-grey-2: #817d92;
+  --clr-grey-3: #54535b;
+  --clr-grey-4: #24232c;
+  --clr-grey-5: #18171f;
+  --clr-grey-6: #14131b;
+  --clr-grey-7: #08070b;
+
+  --clr-primary: #a4ffaf;
+
+  --clr-strength-1: #f64a4a;
+  --clr-strength-2: #fb7c58;
+  --clr-strength-3: #f8cd65;
+  --clr-strength-4: #a4ffaf;
+
+  --ff-main: "JetBrains Mono";
+  --ff-secondary: "Fraunces";
+
+  --fw-normal: 700;
+
+  // FONT SIZE
+  --fs-4: #{toRem(16px)};
+  --fs-3: #{toRem(18px)};
+  --fs-2: #{toRem(24px)};
+  --fs-1: #{toRem(32px)};
+
+  // LINE HEIGHT
+  --lh-4: 1.25;
+  --lh-3: 1.33;
+  --lh-2: 1.33;
+  --lh-1: 1.31;
+
+  // Letter spacing
+  --ls-1: 0px;
+
+  // SPACING
+  --sp-1: #{toRem(8px)};
+  --sp-2: #{toRem(16px)};
+  --sp-3: #{toRem(24px)};
+  --sp-4: #{toRem(32px)};
+  --sp-5: #{toRem(56px)};
+  --sp-6: #{toRem(80px)};
+  --sp-7: #{toRem(104px)};
+  --sp-8: #{toRem(128px)};
+  --sp-9: #{toRem(160px)};
+  --sp-10: #{toRem(176px)};
+  --sp-11: #{toRem(184px)};
+
+  --container-width-desktop: #{toRem(1440px)};
+  --container-width-mobile: #{toRem(375px)};
+
+  --br-1: #{toRem(10px)};
+
+  --desktop-calc-max-width: #{toRem(920px)};
+}
+
+$bp-tablet: toRem(768px);
+$bp-desktop: toRem(1440px);
