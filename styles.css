@@ -12,45 +12,58 @@
   --clr-primary: hsl(172, 67%, 45%);
   --clr-white: #fff;
   --clr-black: #000;
-  --clr-grey-1: #e6e5ea;
-  --clr-grey-2: #817d92;
-  --clr-grey-3: #54535b;
-  --clr-grey-4: #24232c;
-  --clr-grey-5: #18171f;
-  --clr-grey-6: #14131b;
-  --clr-grey-7: #08070b;
-  --clr-primary: #a4ffaf;
-  --clr-strength-1: #f64a4a;
-  --clr-strength-2: #fb7c58;
-  --clr-strength-3: #f8cd65;
-  --clr-strength-4: #a4ffaf;
-  --ff-main: "JetBrains Mono";
-  --ff-secondary: "Fraunces";
-  --fw-normal: 700;
-  --fs-4: 1rem;
-  --fs-3: 1.125rem;
-  --fs-2: 1.5rem;
-  --fs-1: 2rem;
-  --lh-4: 1.25;
-  --lh-3: 1.33;
-  --lh-2: 1.33;
-  --lh-1: 1.31;
+  --clr-grey-1: #f4f6fa;
+  --clr-grey-2: #626c7f;
+  --clr-blue-1: #ebf0ff;
+  --clr-blue-2: #edf1f9;
+  --clr-blue-3: #abc1e1;
+  --clr-blue-4: #306aff;
+  --clr-blue-5: #3b4d66;
+  --clr-blue-6: #313e51;
+  --clr-blue-7: #2d3949;
+  --clr-green-1: #e0fdef;
+  --clr-green-2: #2fd887;
+  --clr-purple-1: #f6e7ff;
+  --clr-purple-2: #a729f5;
+  --clr-orange-1: #fff5ed;
+  --clr-orange-2: #ff7e35;
+  --clr-red-1: #ee5454;
+  --ff-main: "Rubik";
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fs-1: 5.5rem;
+  --fs-2: 2.5rem;
+  --fs-3: 1.25rem;
+  --fs-4: 1.125rem;
+  --fs-5: 0.875rem;
+  --lh-1: 1;
+  --lh-2: 1;
+  --lh-3: 1.2;
+  --lh-4: 1;
+  --lh-5: 1.5;
+  --lh-6: 1.6;
   --ls-1: 0px;
   --sp-1: 0.5rem;
   --sp-2: 1rem;
   --sp-3: 1.5rem;
   --sp-4: 2rem;
-  --sp-5: 3.5rem;
-  --sp-6: 5rem;
-  --sp-7: 6.5rem;
+  --sp-5: 2.5rem;
+  --sp-6: 3rem;
+  --sp-7: 4rem;
   --sp-8: 8rem;
-  --sp-9: 10rem;
-  --sp-10: 11rem;
-  --sp-11: 11.5rem;
-  --container-width-desktop: 90rem;
-  --container-width-mobile: 23.4375rem;
-  --br-1: 0.625rem;
-  --desktop-calc-max-width: 57.5rem;
+  --sp-9: 9rem;
+  --sp-10: 11.5rem;
+}
+@media (min-width: 48rem) {
+  :root {
+    --fs-1: 9rem;
+    --fs-2: 4rem;
+    --fs-3: 2.25rem;
+    --fs-4: 1.75rem;
+    --fs-5: 1.5rem;
+    --fs-6: 1.25rem;
+  }
 }
 
 * {
@@ -103,7 +116,7 @@ html {
 body {
   font-family: var(--ff-main), sans-serif;
   font-size: var(--fs-4);
-  font-weight: var(--fw-normal);
+  font-weight: var(--fw-medium);
   line-height: var(--lh-4);
   letter-spacing: var(--ls-1);
 }
