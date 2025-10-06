@@ -172,7 +172,6 @@ input,
 button,
 textarea,
 select {
-  -webkit-appearance: none;
   color: inherit;
   font: inherit;
   background: none;
