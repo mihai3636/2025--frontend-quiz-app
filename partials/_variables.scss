@@ -88,3 +88,65 @@ $bp-desktop: toRem(1440px);
   --sp-9: #{toRem(144px)};
   --sp-10: #{toRem(184px)};
 }
+
+/**
+
+TODO: trebuie extrase niste denumiri de variabile pentru perechile astea de culori si schimbata valoare variabilei in functie de tema
+
+Pentru schimbarea de teme:
+
+img decoratiune background diferit: desktop / tablet / mobile dar si dark / light
+
+----------------------------  Start menu Light vs Dark:
+
+img decoratiune
+culoare background: --clr-grey-1 vs --clr-blue-6
+culoare items background:  white vs --clr-blue-5
+culoare items text : --clr-blue-6 vs white
+culoare title: --clr-blue-6 vs white
+culoare title label scris mic ("question 6 of 10"): --clr-grey-2 vs --clr-blue-3
+
+culoare categorie title: clr-blue-6 vs white 
+
+culoare   theme switcher: clr-grey-2 vs white
+
+----------------------------   Question:
+
+Question 6 of 10 (label intrebare) - diferenta: --clr-grey-2 vs --clr-blue-3
+culoare text continut varianta: --clr-blue-6 vs white
+culoare title intrebare: clr-blue-6 vs white
+
+----------------------------   Active and hover:
+
+nu vad diferente 
+
+----------------------------   Correct answer:
+
+nu vad diferente 
+
+
+----------------------------   Incorrect answer:
+
+nu vad diferente 
+
+
+----------------------------   No answer selected:
+
+culoarea textului erorii "Please select an answer" difera, dar nu stiu daca as schimba-o: --clr-red   vs --clr-grey-1
+
+----------------------------   Score:
+
+culoare tab score background :white vs --clr-blue-5
+culoare score category label: --clr-blue-6 vs white
+culoare score text: --clr-blue-6 vs white
+culoare score label ("out of 10") // diferente similare ca in primul ecran: --clr-grey-2 vs --clr-blue-3
+
+
+
+background
+item background
+text color
+label color
+theme-switcher-color
+
+**/

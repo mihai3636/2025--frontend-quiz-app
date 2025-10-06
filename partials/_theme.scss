@@ -1,0 +1,17 @@
+/* Light theme */
+.theme-light {
+  --clr-bg: var(--clr-grey-1);
+  --clr-surface: var(--clr-white);
+  --clr-text: var(--clr-blue-6);
+  --clr-label: var(--clr-grey-2);
+  --clr-theme-switcher: var(--clr-grey-2);
+}
+
+/* Dark theme */
+.theme-dark {
+  --clr-bg: var(--clr-blue-6);
+  --clr-surface: var(--clr-blue-5);
+  --clr-text: var(--clr-white);
+  --clr-label: var(--clr-blue-3);
+  --clr-theme-switcher: var(--clr-white);
+}
