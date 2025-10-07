@@ -7,36 +7,23 @@
   justify-content: space-between;
 
   padding-block-end: var(--sp-2);
+  margin-block-end: var(--sp-4);
 }
 
 .title {
   display: flex;
   align-items: center;
   gap: var(--sp-2);
-}
 
-.logo-container {
-  width: toRem(40px);
-  height: toRem(40px);
-  border-radius: toRem(4px);
-  background-color: var(--clr-purple-1);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo-icon {
-  width: toRem(21.42px);
-  height: toRem(25px);
-}
-
-.title-text {
+  --border-logo-container: var(--br-logo);
 }
 
 .theme-switcher {
   display: flex;
   align-items: center;
+  gap: var(--sp-1);
+
+  cursor: pointer;
 }
 
 .theme-switcher-icon-sun {
@@ -80,6 +67,7 @@
   height: 20px;
   border-radius: var(--br-2);
   padding: var(--padding);
+  cursor: pointer;
 
   background-color: var(--clr-purple-2);
 

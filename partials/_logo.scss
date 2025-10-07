@@ -1,0 +1,34 @@
+@use "utils" as *;
+@use "variables" as *;
+
+.logo-container {
+  width: toRem(40px);
+  height: toRem(40px);
+  border-radius: var(--border-logo-container);
+  background-color: var(--clr-purple-1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo--html {
+  background-color: var(--clr-orange-1);
+}
+
+.logo--css {
+  background-color: var(--clr-green-1);
+}
+
+.logo--js {
+  background-color: var(--clr-blue-1);
+}
+
+.logo--accessibility {
+  background-color: var(--clr-purple-1);
+}
+
+.logo-icon {
+  width: toRem(21.42px);
+  height: toRem(25px);
+}

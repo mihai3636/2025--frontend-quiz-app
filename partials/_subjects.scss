@@ -1,0 +1,27 @@
+@use "./variables" as *;
+@use "./utils" as *;
+
+.subjects-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+
+  list-style: none;
+}
+
+.subjects-item {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+
+  padding: var(--sp-2);
+  background-color: var(--clr-surface);
+  border-radius: var(--br-item);
+  cursor: pointer;
+
+  --border-logo-container: var(--br-logo-subject);
+}
+
+.subjects-title {
+  color: var(--clr-text);
+}

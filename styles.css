@@ -57,6 +57,9 @@
   --br-1: toRem(4px);
   --br-2: 999px;
   --br-circle: 50%;
+  --br-item: 12px;
+  --br-logo: 4px;
+  --br-logo-subject: 6px;
 }
 @media (min-width: 48rem) {
   :root {
@@ -241,27 +244,30 @@ body {
   }
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-block-end: var(--sp-2);
-}
-
-.title {
-  display: flex;
-  align-items: center;
-  gap: var(--sp-2);
-}
-
 .logo-container {
   width: 2.5rem;
   height: 2.5rem;
-  border-radius: 0.25rem;
+  border-radius: var(--border-logo-container);
   background-color: var(--clr-purple-1);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.logo--html {
+  background-color: var(--clr-orange-1);
+}
+
+.logo--css {
+  background-color: var(--clr-green-1);
+}
+
+.logo--js {
+  background-color: var(--clr-blue-1);
+}
+
+.logo--accessibility {
+  background-color: var(--clr-purple-1);
 }
 
 .logo-icon {
@@ -269,9 +275,26 @@ body {
   height: 1.5625rem;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block-end: var(--sp-2);
+  margin-block-end: var(--sp-4);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  --border-logo-container: var(--br-logo);
+}
+
 .theme-switcher {
   display: flex;
   align-items: center;
+  gap: var(--sp-1);
+  cursor: pointer;
 }
 
 .theme-switcher-icon-sun {
@@ -308,6 +331,7 @@ body {
   height: 20px;
   border-radius: var(--br-2);
   padding: var(--padding);
+  cursor: pointer;
   background-color: var(--clr-purple-2);
   position: relative;
 }
@@ -328,6 +352,49 @@ body {
 }
 #checkboxTheme:checked + .theme-switcher-btn {
   left: calc(100% - var(--padding) - var(--radius));
+}
+
+.title-app {
+  margin-block-end: var(--sp-5);
+}
+
+.title-app-text {
+  font-size: var(--fs-2);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-2);
+  margin-block-end: var(--sp-2);
+}
+.title-app-text span {
+  font-weight: var(--fw-medium);
+}
+
+.subtitle-app-text {
+  font-size: var(--fs-5);
+  line-height: var(--lh-5);
+  font-weight: var(--fw-light);
+  font-style: italic;
+}
+
+.subjects-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  list-style: none;
+}
+
+.subjects-item {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-2);
+  background-color: var(--clr-surface);
+  border-radius: var(--br-item);
+  cursor: pointer;
+  --border-logo-container: var(--br-logo-subject);
+}
+
+.subjects-title {
+  color: var(--clr-text);
 }
 
 /*# sourceMappingURL=styles.css.map */
