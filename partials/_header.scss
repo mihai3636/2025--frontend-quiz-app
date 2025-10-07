@@ -1,0 +1,109 @@
+@use "./utils" as *;
+@use "./variables" as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-block-end: var(--sp-2);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.logo-container {
+  width: toRem(40px);
+  height: toRem(40px);
+  border-radius: toRem(4px);
+  background-color: var(--clr-purple-1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon {
+  width: toRem(21.42px);
+  height: toRem(25px);
+}
+
+.title-text {
+}
+
+.theme-switcher {
+  display: flex;
+  align-items: center;
+}
+
+.theme-switcher-icon-sun {
+  width: 14px;
+  height: 14px;
+
+  background-image: url("../assets/images/icon-sun-light.svg");
+  background-size: contain;
+}
+
+.theme-switcher-icon-moon {
+  width: 14px;
+  height: 14px;
+
+  background-image: url("../assets/images/icon-moon-light.svg");
+  background-size: contain;
+}
+
+.theme-light {
+  .theme-switcher-icon-sun {
+    background-image: url("../assets/images/icon-sun-dark.svg");
+  }
+
+  .theme-switcher-icon-moon {
+    background-image: url("../assets/images/icon-moon-dark.svg");
+  }
+}
+
+.theme-dark {
+  .theme-switcher-icon-sun {
+    background-image: url("../assets/images/icon-sun-light.svg");
+  }
+  .theme-switcher-icon-moon {
+    background-image: url("../assets/images/icon-moon-light.svg");
+  }
+}
+
+.theme-switcher-btn-container {
+  --padding: 4px;
+  width: 32px;
+  height: 20px;
+  border-radius: var(--br-2);
+  padding: var(--padding);
+
+  background-color: var(--clr-purple-2);
+
+  position: relative;
+}
+
+.theme-switcher-btn {
+  --radius: 12px;
+  width: var(--radius);
+  height: var(--radius);
+  border-radius: var(--br-circle);
+
+  background-color: var(--clr-white);
+
+  position: absolute;
+  left: var(--padding);
+
+  transition: left 0.25s ease;
+}
+
+#checkboxTheme {
+  display: none;
+
+  &:checked + .theme-switcher-btn {
+    left: calc(100% - var(--padding) - var(--radius));
+  }
+}

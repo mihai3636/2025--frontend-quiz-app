@@ -87,6 +87,11 @@ $bp-desktop: toRem(1440px);
   --sp-8: #{toRem(128px)};
   --sp-9: #{toRem(144px)};
   --sp-10: #{toRem(184px)};
+
+  // BORDER RADIUS
+  --br-1: toRem(4px);
+  --br-2: 999px;
+  --br-circle: 50%;
 }
 
 /**

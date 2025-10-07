@@ -13,10 +13,13 @@ body {
   letter-spacing: var(--ls-1);
 
   background-color: var(--clr-bg);
+  color: var(--clr-text);
 }
 
 .quiz-app {
   min-height: 100svh;
+  padding-inline: var(--sp-3);
+  padding-block-start: var(--sp-2);
 }
 
 .theme-light .quiz-app {
