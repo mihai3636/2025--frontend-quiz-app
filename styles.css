@@ -200,4 +200,38 @@ body {
   background-color: var(--clr-bg);
 }
 
+.quiz-app {
+  min-height: 100svh;
+}
+
+.theme-light .quiz-app {
+  background-image: url("../assets/images/pattern-background-mobile-light.svg");
+  background-repeat: no-repeat;
+}
+@media (min-width: 48rem) {
+  .theme-light .quiz-app {
+    background-image: url("../assets/images/pattern-background-tablet-light.svg");
+  }
+}
+@media (min-width: 90rem) {
+  .theme-light .quiz-app {
+    background-image: url("../assets/images/pattern-background-desktop-light.svg");
+  }
+}
+
+.theme-dark .quiz-app {
+  background-image: url("../assets/images/pattern-background-mobile-dark.svg");
+  background-repeat: no-repeat;
+}
+@media (min-width: 48rem) {
+  .theme-dark .quiz-app {
+    background-image: url("../assets/images/pattern-background-tablet-dark.svg");
+  }
+}
+@media (min-width: 90rem) {
+  .theme-dark .quiz-app {
+    background-image: url("../assets/images/pattern-background-desktop-dark.svg");
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
