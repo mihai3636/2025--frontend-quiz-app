@@ -24,6 +24,10 @@
   @media (min-width: $bp-tablet) {
     gap: var(--sp-4);
   }
+
+  @media (min-width: $bp-desktop) {
+    padding: var(--sp-3);
+  }
 }
 
 .subjects-title {

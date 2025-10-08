@@ -15,6 +15,10 @@
   span {
     font-weight: var(--fw-medium);
   }
+
+  @media (min-width: $bp-desktop) {
+    margin-block-end: var(--sp-6);
+  }
 }
 
 .subtitle-app-text {

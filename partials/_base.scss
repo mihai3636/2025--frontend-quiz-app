@@ -14,17 +14,9 @@ body {
 
   background-color: var(--clr-bg);
   color: var(--clr-text);
-}
 
-.quiz-app {
-  min-height: 100svh;
-  padding-inline: var(--sp-3);
-  padding-block-start: var(--sp-2);
-
-  @media (min-width: $bp-tablet) {
-    padding-inline: var(--sp-7);
-    padding-block-start: var(--sp-5);
-  }
+  display: flex;
+  justify-content: center;
 }
 
 .theme-light .quiz-app {

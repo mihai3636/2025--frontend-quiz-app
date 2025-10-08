@@ -8,6 +8,10 @@
 
   padding-block-end: var(--sp-2);
   margin-block-end: var(--sp-4);
+
+  @media (min-width: $bp-desktop) {
+    margin-block-end: var(--sp-7);
+  }
 }
 
 .title {
