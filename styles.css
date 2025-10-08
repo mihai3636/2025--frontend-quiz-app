@@ -42,7 +42,7 @@
   --lh-3: 1.2;
   --lh-4: 1;
   --lh-5: 1.5;
-  --lh-6: 1.6;
+  --lh-6: 1.5;
   --ls-1: 0px;
   --sp-1: 0.5rem;
   --sp-2: 1rem;
@@ -69,6 +69,11 @@
     --fs-4: 1.75rem;
     --fs-5: 1.5rem;
     --fs-6: 1.25rem;
+  }
+}
+@media (min-width: 48rem) {
+  :root {
+    --br-logo: 8px;
   }
 }
 
@@ -213,6 +218,12 @@ body {
   padding-inline: var(--sp-3);
   padding-block-start: var(--sp-2);
 }
+@media (min-width: 48rem) {
+  .quiz-app {
+    padding-inline: var(--sp-7);
+    padding-block-start: var(--sp-5);
+  }
+}
 
 .theme-light .quiz-app {
   background-image: url("../assets/images/pattern-background-mobile-light.svg");
@@ -253,6 +264,12 @@ body {
   align-items: center;
   justify-content: center;
 }
+@media (min-width: 48rem) {
+  .logo-container {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
 
 .logo--html {
   background-color: var(--clr-orange-1);
@@ -274,6 +291,12 @@ body {
   width: 1.33875rem;
   height: 1.5625rem;
 }
+@media (min-width: 48rem) {
+  .logo-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
 
 .header {
   display: flex;
@@ -286,7 +309,7 @@ body {
 .title {
   display: flex;
   align-items: center;
-  gap: var(--sp-2);
+  gap: var(--sp-3);
   --border-logo-container: var(--br-logo);
 }
 
@@ -303,12 +326,24 @@ body {
   background-image: url("../assets/images/icon-sun-light.svg");
   background-size: contain;
 }
+@media (min-width: 48rem) {
+  .theme-switcher-icon-sun {
+    width: 21px;
+    height: 21px;
+  }
+}
 
 .theme-switcher-icon-moon {
   width: 14px;
   height: 14px;
   background-image: url("../assets/images/icon-moon-light.svg");
   background-size: contain;
+}
+@media (min-width: 48rem) {
+  .theme-switcher-icon-moon {
+    width: 21px;
+    height: 21px;
+  }
 }
 
 .theme-light .theme-switcher-icon-sun {
@@ -331,9 +366,15 @@ body {
   height: 20px;
   border-radius: var(--br-2);
   padding: var(--padding);
-  cursor: pointer;
   background-color: var(--clr-purple-2);
+  cursor: pointer;
   position: relative;
+}
+@media (min-width: 48rem) {
+  .theme-switcher-btn-container {
+    width: 48px;
+    height: 28px;
+  }
 }
 
 .theme-switcher-btn {
@@ -345,6 +386,11 @@ body {
   position: absolute;
   left: var(--padding);
   transition: left 0.25s ease;
+}
+@media (min-width: 48rem) {
+  .theme-switcher-btn {
+    --radius: 20px;
+  }
 }
 
 #checkboxTheme {
@@ -374,6 +420,12 @@ body {
   font-weight: var(--fw-light);
   font-style: italic;
 }
+@media (min-width: 48rem) {
+  .subtitle-app-text {
+    font-size: var(--fs-6);
+    line-height: var(--lh-6);
+  }
+}
 
 .subjects-list {
   display: flex;
@@ -391,6 +443,11 @@ body {
   border-radius: var(--br-item);
   cursor: pointer;
   --border-logo-container: var(--br-logo-subject);
+}
+@media (min-width: 48rem) {
+  .subjects-item {
+    gap: var(--sp-4);
+  }
 }
 
 .subjects-title {

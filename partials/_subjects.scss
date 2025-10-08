@@ -20,6 +20,10 @@
   cursor: pointer;
 
   --border-logo-container: var(--br-logo-subject);
+
+  @media (min-width: $bp-tablet) {
+    gap: var(--sp-4);
+  }
 }
 
 .subjects-title {

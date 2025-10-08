@@ -13,9 +13,12 @@
 .title {
   display: flex;
   align-items: center;
-  gap: var(--sp-2);
+  gap: var(--sp-3);
 
   --border-logo-container: var(--br-logo);
+}
+
+.title-text {
 }
 
 .theme-switcher {
@@ -32,6 +35,11 @@
 
   background-image: url("../assets/images/icon-sun-light.svg");
   background-size: contain;
+
+  @media (min-width: $bp-tablet) {
+    width: 21px;
+    height: 21px;
+  }
 }
 
 .theme-switcher-icon-moon {
@@ -40,6 +48,11 @@
 
   background-image: url("../assets/images/icon-moon-light.svg");
   background-size: contain;
+
+  @media (min-width: $bp-tablet) {
+    width: 21px;
+    height: 21px;
+  }
 }
 
 .theme-light {
@@ -67,11 +80,15 @@
   height: 20px;
   border-radius: var(--br-2);
   padding: var(--padding);
+  background-color: var(--clr-purple-2);
   cursor: pointer;
 
-  background-color: var(--clr-purple-2);
-
   position: relative;
+
+  @media (min-width: $bp-tablet) {
+    width: 48px;
+    height: 28px;
+  }
 }
 
 .theme-switcher-btn {
@@ -86,6 +103,10 @@
   left: var(--padding);
 
   transition: left 0.25s ease;
+
+  @media (min-width: $bp-tablet) {
+    --radius: 20px;
+  }
 }
 
 #checkboxTheme {

@@ -10,6 +10,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (min-width: $bp-tablet) {
+    width: toRem(56px);
+    height: toRem(56px);
+  }
 }
 
 .logo--html {
@@ -31,4 +36,9 @@
 .logo-icon {
   width: toRem(21.42px);
   height: toRem(25px);
+
+  @media (min-width: $bp-tablet) {
+    width: 40px;
+    height: 40px;
+  }
 }
