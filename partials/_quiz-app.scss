@@ -22,7 +22,8 @@
 .quiz-body {
   @media (min-width: $bp-desktop) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 49%;
+    gap: var(--sp-8);
   }
 }
 

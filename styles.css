@@ -60,6 +60,7 @@
   --br-item: 12px;
   --br-logo: 4px;
   --br-logo-subject: 6px;
+  --br-progress-bar: 104px;
 }
 @media (min-width: 48rem) {
   :root {
@@ -245,6 +246,10 @@ body {
   }
 }
 
+.hidden {
+  display: none;
+}
+
 .text-label {
   font-size: var(--fs-5);
   line-height: var(--lh-5);
@@ -256,6 +261,16 @@ body {
   .text-label {
     font-size: var(--fs-6);
     line-height: var(--lh-6);
+  }
+}
+
+.text-label--question {
+  display: block;
+  margin-block-end: var(--sp-2);
+}
+@media (min-width: 48rem) {
+  .text-label--question {
+    margin-block-end: var(--sp-3);
   }
 }
 
@@ -299,7 +314,8 @@ body {
 @media (min-width: 90rem) {
   .quiz-body {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 49%;
+    gap: var(--sp-8);
   }
 }
 
@@ -525,6 +541,34 @@ body {
 
 .item-title {
   color: var(--clr-text);
+}
+
+.question-text {
+  font-size: var(--fs-3);
+  line-height: var(--lh-3);
+  font-weight: var(--fw-medium);
+  color: var(--clr-text);
+  margin-block-end: var(--sp-3);
+}
+@media (min-width: 48rem) {
+  .question-text {
+    margin-block-end: var(--sp-5);
+  }
+}
+
+.progress-bar-container {
+  width: 100%;
+  background-color: var(--clr-surface);
+  padding: 4px;
+  border-radius: var(--br-2);
+}
+
+.progress-bar {
+  --percentage: 30%;
+  height: var(--sp-1);
+  width: var(--percentage);
+  background-color: var(--clr-purple-2);
+  border-radius: var(--br-progress-bar);
 }
 
 /*# sourceMappingURL=styles.css.map */

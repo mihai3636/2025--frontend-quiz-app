@@ -1,0 +1,31 @@
+@use "./variables" as *;
+@use "./utils" as *;
+
+.question-text {
+  font-size: var(--fs-3);
+  line-height: var(--lh-3);
+  font-weight: var(--fw-medium);
+  color: var(--clr-text);
+
+  margin-block-end: var(--sp-3);
+
+  @media (min-width: $bp-tablet) {
+    margin-block-end: var(--sp-5);
+  }
+}
+
+.progress-bar-container {
+  width: 100%;
+  background-color: var(--clr-surface);
+  padding: 4px;
+  border-radius: var(--br-2);
+}
+
+.progress-bar {
+  --percentage: 30%;
+  height: var(--sp-1);
+  width: var(--percentage);
+
+  background-color: var(--clr-purple-2);
+  border-radius: var(--br-progress-bar);
+}
