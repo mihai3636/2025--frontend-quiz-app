@@ -2,8 +2,11 @@
 @use "./partials/theme";
 @use "./partials/reset";
 @use "./partials/base";
+@use "./partials/common";
 @use "./partials/quiz-app";
 @use "./partials/logo";
 @use "./partials/header";
 @use "./partials/title";
 @use "./partials/subjects";
+@use "./partials/question-header";
+@use "./partials/question-body";

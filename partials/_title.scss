@@ -1,10 +1,6 @@
 @use "./variables" as *;
 @use "./utils" as *;
 
-.title-app {
-  margin-block-end: var(--sp-5);
-}
-
 .title-app-text {
   font-size: var(--fs-2);
   font-weight: var(--fw-light);
@@ -18,18 +14,5 @@
 
   @media (min-width: $bp-desktop) {
     margin-block-end: var(--sp-6);
-  }
-}
-
-.subtitle-app-text {
-  font-size: var(--fs-5);
-  line-height: var(--lh-5);
-  font-weight: var(--fw-light);
-  color: var(--clr-label);
-  font-style: italic;
-
-  @media (min-width: $bp-tablet) {
-    font-size: var(--fs-6);
-    line-height: var(--lh-6);
   }
 }

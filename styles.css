@@ -245,6 +245,20 @@ body {
   }
 }
 
+.text-label {
+  font-size: var(--fs-5);
+  line-height: var(--lh-5);
+  font-weight: var(--fw-light);
+  color: var(--clr-label);
+  font-style: italic;
+}
+@media (min-width: 48rem) {
+  .text-label {
+    font-size: var(--fs-6);
+    line-height: var(--lh-6);
+  }
+}
+
 .quiz-app {
   min-height: 100svh;
   width: 100%;
@@ -270,6 +284,10 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+}
+
+.quiz-section {
+  margin-block-end: var(--sp-5);
 }
 
 .logo-container {
@@ -427,10 +445,6 @@ body {
   left: calc(100% - var(--padding) - var(--radius));
 }
 
-.title-app {
-  margin-block-end: var(--sp-5);
-}
-
 .title-app-text {
   font-size: var(--fs-2);
   font-weight: var(--fw-light);
@@ -443,20 +457,6 @@ body {
 @media (min-width: 90rem) {
   .title-app-text {
     margin-block-end: var(--sp-6);
-  }
-}
-
-.subtitle-app-text {
-  font-size: var(--fs-5);
-  line-height: var(--lh-5);
-  font-weight: var(--fw-light);
-  color: var(--clr-label);
-  font-style: italic;
-}
-@media (min-width: 48rem) {
-  .subtitle-app-text {
-    font-size: var(--fs-6);
-    line-height: var(--lh-6);
   }
 }
 
