@@ -33,6 +33,10 @@
   background-color: var(--clr-purple-1);
 }
 
+.logo--letter {
+  background-color: var(--clr-grey-1);
+}
+
 .logo-icon {
   width: toRem(21.42px);
   height: toRem(25px);
@@ -41,4 +45,11 @@
     width: 40px;
     height: 40px;
   }
+}
+
+.logo-text {
+  font-size: var(--fs-4);
+  line-height: var(--lh-4);
+  font-weight: var(--fw-medium);
+  color: var(--clr-grey-2);
 }

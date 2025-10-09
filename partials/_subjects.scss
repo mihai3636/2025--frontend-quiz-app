@@ -1,7 +1,7 @@
 @use "./variables" as *;
 @use "./utils" as *;
 
-.subjects-list {
+.quiz-list {
   display: flex;
   flex-direction: column;
   gap: var(--sp-2);
@@ -9,7 +9,7 @@
   list-style: none;
 }
 
-.subjects-item {
+.quiz-item {
   display: flex;
   align-items: center;
   gap: var(--sp-2);
@@ -30,6 +30,6 @@
   }
 }
 
-.subjects-title {
+.item-title {
   color: var(--clr-text);
 }
