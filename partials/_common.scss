@@ -13,3 +13,20 @@
     line-height: var(--lh-6);
   }
 }
+
+.btn {
+  display: block;
+  width: 100%;
+  padding-block: var(--sp-2);
+  border-radius: var(--br-item);
+
+  background-color: var(--clr-purple-2);
+  color: var(--clr-white);
+  font-size: var(--fs-4);
+  line-height: var(--lh-4);
+  font-weight: var(--fw-medium);
+
+  @media (min-width: $bp-tablet) {
+    padding-block: var(--sp-4);
+  }
+}

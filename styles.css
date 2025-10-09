@@ -259,6 +259,23 @@ body {
   }
 }
 
+.btn {
+  display: block;
+  width: 100%;
+  padding-block: var(--sp-2);
+  border-radius: var(--br-item);
+  background-color: var(--clr-purple-2);
+  color: var(--clr-white);
+  font-size: var(--fs-4);
+  line-height: var(--lh-4);
+  font-weight: var(--fw-medium);
+}
+@media (min-width: 48rem) {
+  .btn {
+    padding-block: var(--sp-4);
+  }
+}
+
 .quiz-app {
   min-height: 100svh;
   width: 100%;
@@ -322,7 +339,7 @@ body {
   background-color: var(--clr-purple-1);
 }
 
-.logo--letter {
+.logo--text {
   background-color: var(--clr-grey-1);
 }
 
@@ -476,6 +493,13 @@ body {
   flex-direction: column;
   gap: var(--sp-2);
   list-style: none;
+  margin-block-end: var(--sp-2);
+}
+@media (min-width: 48rem) {
+  .quiz-list {
+    gap: var(--sp-3);
+    margin-block-end: var(--sp-4);
+  }
 }
 
 .quiz-item {
