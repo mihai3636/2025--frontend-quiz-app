@@ -331,8 +331,13 @@ body {
 .title {
   display: flex;
   align-items: center;
-  gap: var(--sp-3);
+  gap: var(--sp-2);
   --border-logo-container: var(--br-logo);
+}
+@media (min-width: 48rem) {
+  .title {
+    gap: var(--sp-3);
+  }
 }
 
 .theme-switcher {
@@ -445,6 +450,7 @@ body {
   font-size: var(--fs-5);
   line-height: var(--lh-5);
   font-weight: var(--fw-light);
+  color: var(--clr-label);
   font-style: italic;
 }
 @media (min-width: 48rem) {
