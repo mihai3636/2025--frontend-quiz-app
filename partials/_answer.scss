@@ -1,0 +1,42 @@
+@use "./variables" as *;
+@use "./utils" as *;
+
+.icon-correct {
+  display: none;
+  margin-left: auto;
+  width: 24px;
+  height: 24px;
+
+  @media (min-width: $bp-tablet) {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.quiz-section--answers input[type="radio"]:checked + .quiz-item {
+  box-shadow: var(--bs-question-selected);
+
+  .logo-container {
+    background-color: var(--clr-purple-2);
+  }
+
+  .logo-text {
+    color: var(--clr-white);
+  }
+}
+
+.correct input[type="radio"]:checked + .quiz-item {
+  box-shadow: var(--bs-inline-green);
+
+  .logo-container {
+    background-color: var(--clr-green-2);
+  }
+
+  .icon-correct {
+    display: block;
+  }
+}
+
+li[role="radio"]:focus-visible .quiz-item {
+  box-shadow: var(--bs-inline-orange);
+}

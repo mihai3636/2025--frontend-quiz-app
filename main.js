@@ -1,6 +1,6 @@
 console.log("Hello world!");
 
-let isDarkTheme = false;
+let isDarkTheme = true;
 const checkboxThemeEl = document.getElementById("checkboxTheme");
 
 checkboxThemeEl.addEventListener("change", () => {

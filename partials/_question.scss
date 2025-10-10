@@ -38,19 +38,3 @@
     box-shadow: var(--bs-inline-orange);
   }
 }
-
-.quiz-section--answers input[type="radio"]:checked + .quiz-item {
-  box-shadow: var(--bs-question-selected);
-
-  .logo-container {
-    background-color: var(--clr-purple-2);
-  }
-
-  .logo-text {
-    color: var(--clr-white);
-  }
-}
-
-li[role="radio"]:focus-visible .quiz-item {
-  box-shadow: var(--bs-inline-orange);
-}
