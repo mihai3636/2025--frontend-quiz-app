@@ -39,6 +39,8 @@
   line-height: var(--lh-4);
   font-weight: var(--fw-medium);
 
+  cursor: pointer;
+
   @media (min-width: $bp-tablet) {
     padding-block: var(--sp-4);
   }

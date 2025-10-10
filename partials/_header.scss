@@ -97,6 +97,14 @@
     width: 48px;
     height: 28px;
   }
+
+  &:focus-visible {
+    box-shadow: var(--bs-inline-orange);
+  }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .theme-switcher-btn {

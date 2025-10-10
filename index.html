@@ -54,7 +54,12 @@
         <div class="theme-switcher">
           <div class="theme-switcher-icon-sun"></div>
 
-          <label class="theme-switcher-btn-container">
+          <label
+            class="theme-switcher-btn-container"
+            tabindex="0"
+            role="checkbox"
+            aria-checked="false"
+          >
             <input id="checkboxTheme" type="checkbox" />
             <div class="theme-switcher-btn"></div>
           </label>
@@ -82,33 +87,65 @@
         </section>
 
         <section class="quiz-section quiz-section--answers">
-          <ul class="quiz-list">
-            <li class="quiz-item">
-              <div class="logo-container logo--text">
-                <span class="logo-text">A</span>
-              </div>
-              <h2 class="item-title">4.5 : 1</h2>
+          <ul class="quiz-list" role="radiogroup">
+            <li role="radio" tabindex="0">
+              <input
+                id="inputRadioAnswerA"
+                type="radio"
+                name="answer"
+                value="A"
+              />
+              <label for="inputRadioAnswerA" class="quiz-item">
+                <div class="logo-container logo--text">
+                  <span class="logo-text">A</span>
+                </div>
+                <h2 class="item-title">4.5 : 1</h2>
+              </label>
             </li>
 
-            <li class="quiz-item">
-              <div class="logo-container logo--text">
-                <span class="logo-text">B</span>
-              </div>
-              <h2 class="item-title">3 : 1</h2>
+            <li role="radio" tabindex="0">
+              <input
+                id="inputRadioAnswerB"
+                type="radio"
+                name="answer"
+                value="B"
+              />
+              <label for="inputRadioAnswerB" class="quiz-item">
+                <div class="logo-container logo--text">
+                  <span class="logo-text">B</span>
+                </div>
+                <h2 class="item-title">3 : 1</h2>
+              </label>
             </li>
 
-            <li class="quiz-item">
-              <div class="logo-container logo--text">
-                <span class="logo-text">C</span>
-              </div>
-              <h2 class="item-title">2.5 : 1</h2>
+            <li role="radio" tabindex="0">
+              <input
+                id="inputRadioAnswerC"
+                type="radio"
+                name="answer"
+                value="C"
+              />
+              <label for="inputRadioAnswerC" class="quiz-item">
+                <div class="logo-container logo--text">
+                  <span class="logo-text">C</span>
+                </div>
+                <h2 class="item-title">2.5 : 1</h2>
+              </label>
             </li>
 
-            <li class="quiz-item">
-              <div class="logo-container logo--text">
-                <span class="logo-text">D</span>
-              </div>
-              <h2 class="item-title">5 : 1</h2>
+            <li role="radio" tabindex="0">
+              <input
+                id="inputRadioAnswerD"
+                type="radio"
+                name="answer"
+                value="D"
+              />
+              <label for="inputRadioAnswerD" class="quiz-item">
+                <div class="logo-container logo--text">
+                  <span class="logo-text">D</span>
+                </div>
+                <h2 class="item-title">5 : 1</h2>
+              </label>
             </li>
           </ul>
         </section>

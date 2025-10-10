@@ -36,3 +36,11 @@ select {
     outline: none;
   }
 }
+
+*[role="radio"]:focus {
+  outline: none;
+}
+
+input[type="radio"] {
+  display: none;
+}
