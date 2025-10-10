@@ -13,6 +13,18 @@
   }
 }
 
+.icon-incorrect {
+  display: none;
+  margin-left: auto;
+  width: 24px;
+  height: 24px;
+
+  @media (min-width: $bp-tablet) {
+    width: 30px;
+    height: 30px;
+  }
+}
+
 .quiz-section--answers input[type="radio"]:checked + .quiz-item {
   box-shadow: var(--bs-question-selected);
 
@@ -32,6 +44,26 @@
     background-color: var(--clr-green-2);
   }
 
+  .icon-correct {
+    display: block;
+  }
+}
+
+.incorrect input[type="radio"]:checked + .quiz-item {
+  box-shadow: var(--bs-inline-red);
+
+  .logo-container {
+    background-color: var(--clr-red-1);
+  }
+
+  .icon-incorrect {
+    display: block;
+  }
+}
+
+.quiz-section--answers
+  input[type="radio"].true-correct:not(:checked)
+  + .quiz-item {
   .icon-correct {
     display: block;
   }
