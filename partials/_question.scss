@@ -29,3 +29,8 @@
   background-color: var(--clr-purple-2);
   border-radius: var(--br-progress-bar);
 }
+
+.btn--question {
+  grid-row: 2;
+  grid-column: 2 / span 1;
+}

@@ -8,11 +8,8 @@
 
   list-style: none;
 
-  margin-block-end: var(--sp-2);
-
   @media (min-width: $bp-tablet) {
     gap: var(--sp-3);
-    margin-block-end: var(--sp-4);
   }
 }
 
