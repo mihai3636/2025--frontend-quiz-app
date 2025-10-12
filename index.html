@@ -101,14 +101,14 @@
                 </div>
                 <h2 class="item-title">4.5 : 1</h2>
                 <img
-                  class="icon-correct"
+                  class="icon-correct icon-correct--answer"
                   src="./assets/images/icon-correct.svg"
                   alt="Correct checkmark icon"
                 />
                 <img
-                  class="icon-incorrect"
+                  class="icon-incorrect icon-incorrect--answer"
                   src="./assets/images/icon-incorrect.svg"
-                  alt="Correct checkmark icon"
+                  alt="Incorrect checkmark icon"
                 />
               </label>
             </li>
@@ -126,14 +126,14 @@
                 </div>
                 <h2 class="item-title">3 : 1</h2>
                 <img
-                  class="icon-correct"
+                  class="icon-correct icon-correct--answer"
                   src="./assets/images/icon-correct.svg"
                   alt="Correct checkmark icon"
                 />
                 <img
-                  class="icon-incorrect"
+                  class="icon-incorrect icon-incorrect--answer"
                   src="./assets/images/icon-incorrect.svg"
-                  alt="Correct checkmark icon"
+                  alt="Incorrect checkmark icon"
                 />
               </label>
             </li>
@@ -151,14 +151,14 @@
                 </div>
                 <h2 class="item-title">2.5 : 1</h2>
                 <img
-                  class="icon-correct"
+                  class="icon-correct icon-correct--answer"
                   src="./assets/images/icon-correct.svg"
                   alt="Correct checkmark icon"
                 />
                 <img
-                  class="icon-incorrect"
+                  class="icon-incorrect icon-incorrect--answer"
                   src="./assets/images/icon-incorrect.svg"
-                  alt="Correct checkmark icon"
+                  alt="Incorrect checkmark icon"
                 />
               </label>
             </li>
@@ -176,20 +176,30 @@
                 </div>
                 <h2 class="item-title">5 : 1</h2>
                 <img
-                  class="icon-correct"
+                  class="icon-correct icon-correct--answer"
                   src="./assets/images/icon-correct.svg"
                   alt="Correct checkmark icon"
                 />
                 <img
-                  class="icon-incorrect"
+                  class="icon-incorrect icon-incorrect--answer"
                   src="./assets/images/icon-incorrect.svg"
-                  alt="Correct checkmark icon"
+                  alt="Incorrect checkmark icon"
                 />
               </label>
             </li>
           </ul>
         </section>
-        <button class="btn btn--question" type="button">Submit Answer</button>
+        <div class="btn-container btn--question">
+          <button class="btn btn--question" type="button">Submit Answer</button>
+          <div class="btn-error">
+            <img
+              class="icon-incorrect"
+              src="./assets/images/icon-incorrect.svg"
+              alt="Incorrect checkmark icon"
+            />
+            <span class="error-text">Please select an answer</span>
+          </div>
+        </div>
 
         <section class="quiz-section hidden">
           <ul class="quiz-list">

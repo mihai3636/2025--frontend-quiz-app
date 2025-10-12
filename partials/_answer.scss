@@ -1,28 +1,14 @@
 @use "./variables" as *;
 @use "./utils" as *;
 
-.icon-correct {
+.icon-correct--answer {
   display: none;
   margin-left: auto;
-  width: 24px;
-  height: 24px;
-
-  @media (min-width: $bp-tablet) {
-    width: 30px;
-    height: 30px;
-  }
 }
 
-.icon-incorrect {
+.icon-incorrect--answer {
   display: none;
   margin-left: auto;
-  width: 24px;
-  height: 24px;
-
-  @media (min-width: $bp-tablet) {
-    width: 30px;
-    height: 30px;
-  }
 }
 
 .quiz-section--answers input[type="radio"]:checked + .quiz-item {
@@ -44,7 +30,7 @@
     background-color: var(--clr-green-2);
   }
 
-  .icon-correct {
+  .icon-correct.icon-correct--answer {
     display: block;
   }
 }
@@ -56,7 +42,7 @@
     background-color: var(--clr-red-1);
   }
 
-  .icon-incorrect {
+  .icon-incorrect--answer {
     display: block;
   }
 }

@@ -287,6 +287,17 @@ body {
   }
 }
 
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+@media (min-width: 48rem) {
+  .btn-container {
+    gap: var(--sp-4);
+  }
+}
+
 .btn {
   display: block;
   width: 100%;
@@ -299,9 +310,57 @@ body {
   font-weight: var(--fw-medium);
   cursor: pointer;
 }
+.btn:focus-visible {
+  box-shadow: var(--bs-inline-orange);
+}
 @media (min-width: 48rem) {
   .btn {
     padding-block: var(--sp-4);
+  }
+}
+
+.btn-error {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: var(--sp-1);
+}
+
+.btn-error--visible {
+  display: flex;
+}
+
+.error-text {
+  font-size: var(--fs-4);
+  line-height: var(--lh-4);
+  font-weight: var(--fw-regular);
+}
+@media (min-width: 48rem) {
+  .error-text {
+    font-size: var(--fs-5);
+    line-height: var(--lh-5);
+  }
+}
+
+.icon-correct {
+  width: 32px;
+  height: 32px;
+}
+@media (min-width: 48rem) {
+  .icon-correct {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.icon-incorrect {
+  width: 32px;
+  height: 32px;
+}
+@media (min-width: 48rem) {
+  .icon-incorrect {
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -608,34 +667,15 @@ body {
   grid-row: 2;
   grid-column: 2/span 1;
 }
-.btn--question:focus-visible {
-  box-shadow: var(--bs-inline-orange);
-}
 
-.icon-correct {
+.icon-correct--answer {
   display: none;
   margin-left: auto;
-  width: 24px;
-  height: 24px;
-}
-@media (min-width: 48rem) {
-  .icon-correct {
-    width: 30px;
-    height: 30px;
-  }
 }
 
-.icon-incorrect {
+.icon-incorrect--answer {
   display: none;
   margin-left: auto;
-  width: 24px;
-  height: 24px;
-}
-@media (min-width: 48rem) {
-  .icon-incorrect {
-    width: 30px;
-    height: 30px;
-  }
 }
 
 .quiz-section--answers input[type=radio]:checked + .quiz-item {
@@ -654,7 +694,7 @@ body {
 .quiz-section--correct input[type=radio]:checked + .quiz-item .logo-container {
   background-color: var(--clr-green-2);
 }
-.quiz-section--correct input[type=radio]:checked + .quiz-item .icon-correct {
+.quiz-section--correct input[type=radio]:checked + .quiz-item .icon-correct.icon-correct--answer {
   display: block;
 }
 
@@ -664,7 +704,7 @@ body {
 .quiz-section--incorrect input[type=radio]:checked + .quiz-item .logo-container {
   background-color: var(--clr-red-1);
 }
-.quiz-section--incorrect input[type=radio]:checked + .quiz-item .icon-incorrect {
+.quiz-section--incorrect input[type=radio]:checked + .quiz-item .icon-incorrect--answer {
   display: block;
 }
 
