@@ -37,7 +37,7 @@
   }
 }
 
-.correct input[type="radio"]:checked + .quiz-item {
+.quiz-section--correct input[type="radio"]:checked + .quiz-item {
   box-shadow: var(--bs-inline-green);
 
   .logo-container {
@@ -49,7 +49,7 @@
   }
 }
 
-.incorrect input[type="radio"]:checked + .quiz-item {
+.quiz-section--incorrect input[type="radio"]:checked + .quiz-item {
   box-shadow: var(--bs-inline-red);
 
   .logo-container {
