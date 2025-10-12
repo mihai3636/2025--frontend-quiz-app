@@ -5,6 +5,22 @@
   display: none !important;
 }
 
+.title-app-text {
+  font-size: var(--fs-2);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-2);
+
+  margin-block-end: var(--sp-2);
+
+  span {
+    font-weight: var(--fw-medium);
+  }
+
+  @media (min-width: $bp-desktop) {
+    margin-block-end: var(--sp-6);
+  }
+}
+
 .text-label {
   font-size: var(--fs-5);
   line-height: var(--lh-5);

@@ -263,6 +263,21 @@ body {
   display: none !important;
 }
 
+.title-app-text {
+  font-size: var(--fs-2);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-2);
+  margin-block-end: var(--sp-2);
+}
+.title-app-text span {
+  font-weight: var(--fw-medium);
+}
+@media (min-width: 90rem) {
+  .title-app-text {
+    margin-block-end: var(--sp-6);
+  }
+}
+
 .text-label {
   font-size: var(--fs-5);
   line-height: var(--lh-5);
@@ -412,6 +427,27 @@ body {
   }
 }
 
+.quiz-section--score {
+  margin-block-end: var(--sp-2);
+}
+@media (min-width: 48rem) {
+  .quiz-section--score {
+    margin-block-end: var(--sp-4);
+  }
+}
+
+.title-logo-container {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  --border-logo-container: var(--br-logo);
+}
+@media (min-width: 48rem) {
+  .title-logo-container {
+    gap: var(--sp-3);
+  }
+}
+
 .logo-container {
   width: 2.5rem;
   height: 2.5rem;
@@ -476,18 +512,6 @@ body {
 @media (min-width: 90rem) {
   .header {
     margin-block-end: var(--sp-7);
-  }
-}
-
-.title {
-  display: flex;
-  align-items: center;
-  gap: var(--sp-2);
-  --border-logo-container: var(--br-logo);
-}
-@media (min-width: 48rem) {
-  .title {
-    gap: var(--sp-3);
   }
 }
 
@@ -582,21 +606,6 @@ body {
 }
 #checkboxTheme:checked + .theme-switcher-btn {
   left: calc(100% - var(--padding) - var(--radius));
-}
-
-.title-app-text {
-  font-size: var(--fs-2);
-  font-weight: var(--fw-light);
-  line-height: var(--lh-2);
-  margin-block-end: var(--sp-2);
-}
-.title-app-text span {
-  font-weight: var(--fw-medium);
-}
-@media (min-width: 90rem) {
-  .title-app-text {
-    margin-block-end: var(--sp-6);
-  }
 }
 
 .quiz-list {
@@ -715,6 +724,42 @@ body {
 
 li[role=radio]:focus-visible .quiz-item {
   box-shadow: var(--bs-inline-orange);
+}
+
+.score-card {
+  padding: var(--sp-4);
+  background-color: var(--clr-surface);
+  border-radius: var(--br-item);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-2);
+}
+.score-card .text-label {
+  font-style: normal;
+  font-weight: var(--fw-regular);
+}
+@media (min-width: 48rem) {
+  .score-card {
+    padding: var(--sp-6);
+    gap: var(--sp-5);
+  }
+}
+
+.score-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.score-value {
+  font-size: var(--fs-1);
+}
+
+.btn--score {
+  grid-row: 2;
+  grid-column: 2/span 1;
 }
 
 /*# sourceMappingURL=styles.css.map */

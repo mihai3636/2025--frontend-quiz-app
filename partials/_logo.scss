@@ -1,6 +1,18 @@
 @use "utils" as *;
 @use "variables" as *;
 
+.title-logo-container {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+
+  --border-logo-container: var(--br-logo);
+
+  @media (min-width: $bp-tablet) {
+    gap: var(--sp-3);
+  }
+}
+
 .logo-container {
   width: toRem(40px);
   height: toRem(40px);
