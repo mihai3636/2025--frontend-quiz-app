@@ -30,7 +30,9 @@
 .quiz-section {
 }
 
-.quiz-section--title {
+.quiz-section--title,
+.quiz-section--title-question,
+.quiz-section--title-score {
   margin-block-end: var(--sp-5);
 
   @media (min-width: $bp-tablet) {

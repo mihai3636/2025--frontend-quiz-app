@@ -408,11 +408,15 @@ body {
   }
 }
 
-.quiz-section--title {
+.quiz-section--title,
+.quiz-section--title-question,
+.quiz-section--title-score {
   margin-block-end: var(--sp-5);
 }
 @media (min-width: 48rem) {
-  .quiz-section--title {
+  .quiz-section--title,
+  .quiz-section--title-question,
+  .quiz-section--title-score {
     display: grid;
     grid-template-rows: auto 1fr auto;
   }
