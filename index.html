@@ -67,7 +67,10 @@
         </div>
       </header>
       <div class="quiz-body">
-        <section class="quiz-section quiz-section--title">
+        <section
+          class="quiz-section quiz-section--title active transition"
+          data-side="left"
+        >
           <h1 class="title-app-text">
             Welcome to the <br />
             <span>Frontend Quiz!</span>
@@ -75,7 +78,10 @@
           <span class="text-label">Pick a subject to get started</span>
         </section>
 
-        <section class="quiz-section quiz-section--title-question hidden">
+        <section
+          class="quiz-section quiz-section--title-question hidden-left transition"
+          data-side="left"
+        >
           <span class="text-label text-label--question">Question 6 of 10</span>
           <h1 class="question-text">
             Which of these color contrast ratios defines the minimum WCAG 2.1
@@ -86,16 +92,22 @@
           </div>
         </section>
 
-        <section class="quiz-section quiz-section--title-score hidden">
+        <section
+          class="quiz-section quiz-section--title-score hidden-left transition"
+          data-side="left"
+        >
           <h1 class="title-app-text">
             Quiz completed <br />
             <span>You scored...</span>
           </h1>
         </section>
 
-        <section class="quiz-section">
+        <section
+          class="quiz-section quiz-section--categories active transition"
+          data-side="right"
+        >
           <ul class="quiz-list">
-            <li class="quiz-item">
+            <li class="quiz-item" data-category="html">
               <div class="logo-container logo--html">
                 <img
                   class="logo-icon"
@@ -106,7 +118,7 @@
               <h2 class="item-title">HTML</h2>
             </li>
 
-            <li class="quiz-item">
+            <li class="quiz-item" data-category="css">
               <div class="logo-container logo--css">
                 <img
                   class="logo-icon"
@@ -117,7 +129,7 @@
               <h2 class="item-title">CSS</h2>
             </li>
 
-            <li class="quiz-item">
+            <li class="quiz-item" data-category="javascript">
               <div class="logo-container">
                 <img
                   class="logo-icon"
@@ -128,7 +140,7 @@
               <h2 class="item-title">Javascript</h2>
             </li>
 
-            <li class="quiz-item">
+            <li class="quiz-item" data-category="accessibility">
               <div class="logo-container">
                 <img
                   class="logo-icon"
@@ -141,7 +153,10 @@
           </ul>
         </section>
 
-        <section class="quiz-section quiz-section--answers hidden">
+        <section
+          class="quiz-section quiz-section--answers hidden-right transition"
+          data-side="right"
+        >
           <ul class="quiz-list" role="radiogroup">
             <li role="radio" tabindex="0">
               <input
@@ -244,7 +259,10 @@
             </li>
           </ul>
         </section>
-        <div class="btn-container btn--question hidden">
+        <div
+          class="btn-container btn--question hidden-right transition"
+          data-side="right"
+        >
           <button class="btn btn--question" type="button">Submit Answer</button>
           <div class="btn-error">
             <img
@@ -256,7 +274,10 @@
           </div>
         </div>
 
-        <section class="quiz-section quiz-section--score hidden">
+        <section
+          class="quiz-section quiz-section--score hidden-right transition"
+          data-side="right"
+        >
           <div class="score-card">
             <div class="title-logo-container">
               <div class="logo-container">
@@ -275,7 +296,12 @@
             </div>
           </div>
         </section>
-        <button class="btn btn--score hidden">Play again</button>
+        <button
+          class="btn btn--score hidden-right transition"
+          data-side="right"
+        >
+          Play again
+        </button>
       </div>
     </main>
   </body>

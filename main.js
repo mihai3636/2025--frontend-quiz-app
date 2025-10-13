@@ -28,3 +28,34 @@ function changeTheme() {
 
   document.body.className = "theme-light";
 }
+
+function showSection(selector) {
+  const el = document.querySelector(selector);
+  el.classList.remove(`hidden-${el.dataset.side}`);
+  el.classList.add("active");
+}
+
+function hideActiveSections() {
+  document.querySelectorAll(".active").forEach((el) => {
+    let side = el.dataset.side || "right";
+    el.classList.remove("active");
+    el.classList.add(`hidden-${side}`);
+  });
+}
+
+document
+  .querySelector(".quiz-section--categories > .quiz-list")
+  .addEventListener("click", (ev) => {
+    if (ev.target === ev.currentTarget) {
+      console.log("Clicking in between");
+      return;
+    }
+
+    const clickedItem = event.target.closest(".quiz-item");
+    console.log(`Clicked ${clickedItem.dataset.category}`);
+
+    hideActiveSections();
+    showSection(".quiz-section--title-question");
+    showSection(".quiz-section--answers");
+    showSection(".btn-container");
+  });

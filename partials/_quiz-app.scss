@@ -17,6 +17,8 @@
     padding-inline: var(--sp-9);
     padding-block-start: var(--sp-7);
   }
+
+  overflow: hidden;
 }
 
 .quiz-body {
@@ -39,6 +41,9 @@
     display: grid;
     grid-template-rows: auto 1fr auto;
   }
+
+  grid-column: 1;
+  grid-row: 1;
 }
 
 .quiz-section--answers {
@@ -47,6 +52,9 @@
   @media (min-width: $bp-tablet) {
     margin-block-end: var(--sp-4);
   }
+
+  grid-column: 2;
+  grid-row: 1;
 }
 
 .quiz-section--score {
@@ -55,4 +63,12 @@
   @media (min-width: $bp-tablet) {
     margin-block-end: var(--sp-4);
   }
+
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.quiz-section--categories {
+  grid-column: 2;
+  grid-row: 1;
 }
