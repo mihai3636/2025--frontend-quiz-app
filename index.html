@@ -67,6 +67,14 @@
         </div>
       </header>
       <div class="quiz-body">
+        <section class="quiz-section quiz-section--title hidden">
+          <h1 class="title-app-text">
+            Welcome to the <br />
+            <span>Frontend Quiz!</span>
+          </h1>
+          <span class="text-label">Pick a subject to get started</span>
+        </section>
+
         <section class="quiz-section quiz-section--title-question hidden">
           <span class="text-label text-label--question">Question 6 of 10</span>
           <h1 class="question-text">
@@ -78,12 +86,59 @@
           </div>
         </section>
 
-        <section class="quiz-section quiz-section--title hidden">
+        <section class="quiz-section quiz-section--title-score hidden">
           <h1 class="title-app-text">
-            Welcome to the <br />
-            <span>Frontend Quiz!</span>
+            Quiz completed <br />
+            <span>You scored...</span>
           </h1>
-          <span class="text-label">Pick a subject to get started</span>
+        </section>
+
+        <section class="quiz-section hidden">
+          <ul class="quiz-list">
+            <li class="quiz-item">
+              <div class="logo-container logo--html">
+                <img
+                  class="logo-icon"
+                  src="./assets/images/icon-html.svg"
+                  alt="Html logo"
+                />
+              </div>
+              <h2 class="item-title">HTML</h2>
+            </li>
+
+            <li class="quiz-item">
+              <div class="logo-container logo--css">
+                <img
+                  class="logo-icon"
+                  src="./assets/images/icon-css.svg"
+                  alt="CSS logo"
+                />
+              </div>
+              <h2 class="item-title">CSS</h2>
+            </li>
+
+            <li class="quiz-item">
+              <div class="logo-container">
+                <img
+                  class="logo-icon"
+                  src="./assets/images/icon-js.svg"
+                  alt="JS logo"
+                />
+              </div>
+              <h2 class="item-title">Javascript</h2>
+            </li>
+
+            <li class="quiz-item">
+              <div class="logo-container">
+                <img
+                  class="logo-icon"
+                  src="./assets/images/icon-accessibility.svg"
+                  alt="Accessibility logo"
+                />
+              </div>
+              <h2 class="item-title">Accessibility</h2>
+            </li>
+          </ul>
         </section>
 
         <section class="quiz-section quiz-section--answers hidden">
@@ -200,61 +255,6 @@
             <span class="error-text">Please select an answer</span>
           </div>
         </div>
-
-        <section class="quiz-section hidden">
-          <ul class="quiz-list">
-            <li class="quiz-item">
-              <div class="logo-container logo--html">
-                <img
-                  class="logo-icon"
-                  src="./assets/images/icon-html.svg"
-                  alt="Html logo"
-                />
-              </div>
-              <h2 class="item-title">HTML</h2>
-            </li>
-
-            <li class="quiz-item">
-              <div class="logo-container logo--css">
-                <img
-                  class="logo-icon"
-                  src="./assets/images/icon-css.svg"
-                  alt="CSS logo"
-                />
-              </div>
-              <h2 class="item-title">CSS</h2>
-            </li>
-
-            <li class="quiz-item">
-              <div class="logo-container">
-                <img
-                  class="logo-icon"
-                  src="./assets/images/icon-js.svg"
-                  alt="JS logo"
-                />
-              </div>
-              <h2 class="item-title">Javascript</h2>
-            </li>
-
-            <li class="quiz-item">
-              <div class="logo-container">
-                <img
-                  class="logo-icon"
-                  src="./assets/images/icon-accessibility.svg"
-                  alt="Accessibility logo"
-                />
-              </div>
-              <h2 class="item-title">Accessibility</h2>
-            </li>
-          </ul>
-        </section>
-
-        <section class="quiz-section quiz-section--title-score hidden">
-          <h1 class="title-app-text">
-            Quiz completed <br />
-            <span>You scored...</span>
-          </h1>
-        </section>
 
         <section class="quiz-section quiz-section--score hidden">
           <div class="score-card">
