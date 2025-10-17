@@ -1,6 +1,16 @@
 import { showSection, hideActiveSections } from "./common.js";
 
-export function initCategories() {
+export function initCategories(onCategoryClicked) {
+  initCategoryClickListener(onCategoryClicked);
+}
+
+export function showCategories() {
+  hideActiveSections();
+  showSection(".quiz-section--title");
+  showSection(".quiz-section--categories");
+}
+
+function initCategoryClickListener(onCategoryClicked) {
   document
     .querySelector(".quiz-section--categories > .quiz-list")
     .addEventListener("click", (ev) => {
@@ -9,19 +19,6 @@ export function initCategories() {
       }
 
       const clickedItem = event.target.closest(".quiz-item");
-      console.log(`Clicked ${clickedItem.dataset.category}`);
-
-      hideActiveSections();
-      showSection(".quiz-section--title-question");
-      showSection(".quiz-section--answers");
-      showSection(".btn-container");
-
-      history.pushState({ screen: "quiz" }, "", "");
+      onCategoryClicked(clickedItem.dataset.category);
     });
-}
-
-export function showCategories() {
-  hideActiveSections();
-  showSection(".quiz-section--title");
-  showSection(".quiz-section--categories");
 }

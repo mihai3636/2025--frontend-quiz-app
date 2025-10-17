@@ -2,7 +2,6 @@ let isDarkTheme = true;
 let checkboxThemeEl;
 
 export function initTheme() {
-  console.log("Init theme called");
   checkboxThemeEl = document.getElementById("checkboxTheme");
 
   checkboxThemeEl.addEventListener("change", () => {
