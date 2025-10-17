@@ -47,7 +47,7 @@
   }
 }
 
-.quiz-section--answers
+.quiz-section--incorrect
   input[type="radio"].true-correct:not(:checked)
   + .quiz-item {
   .icon-correct {

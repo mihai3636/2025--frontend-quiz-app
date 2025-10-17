@@ -31,7 +31,8 @@ btnQuestion.addEventListener("click", (ev) => {
     onCorrect();
     return;
   }
-  onCorrect();
+
+  showIncorrect();
 });
 
 export function showQuestion({
@@ -41,13 +42,18 @@ export function showQuestion({
   onCorrect: onCorrectParam,
   onIncorrect,
 }) {
-  enableRadios();
-  hideCorrect();
-  hideError();
   correctAnswer = question.answer;
   onCorrect = onCorrectParam;
-
   updateAnswers(question.options);
+
+  unmarkTrueCorrectFromAll();
+  markTrueCorrect();
+
+  enableRadios();
+  hideCorrect();
+  hideIncorrect();
+  hideError();
+
   resetSelectedAnswer();
   updateProgressBar(index, total);
   updateQuestionText(question.question);
@@ -102,6 +108,37 @@ function showCorrect() {
   answersSectionEl.classList.add("quiz-section--correct");
 }
 
+function hideCorrect() {
+  answersSectionEl.classList.remove("quiz-section--correct");
+}
+
+function showIncorrect() {
+  answersSectionEl.classList.add("quiz-section--incorrect");
+}
+
+function hideIncorrect() {
+  answersSectionEl.classList.remove("quiz-section--incorrect");
+}
+
+function markTrueCorrect() {
+  let radioTrueCorrect = getTrueCorrectInputRadio();
+  radioTrueCorrect.classList.add("true-correct");
+}
+
+function unmarkTrueCorrectFromAll() {
+  radioBtnsEl.forEach((radio) => {
+    radio.classList.remove("true-correct");
+  });
+}
+
+function getTrueCorrectInputRadio() {
+  let correctTitle = Array.from(
+    document.querySelectorAll(".quiz-section--answers .item-title")
+  ).find((title) => title.textContent === correctAnswer);
+
+  return correctTitle.closest("li").querySelector('input[type="radio"]');
+}
+
 function disableRadios() {
   radioBtnsEl.forEach((radio) => {
     radio.disabled = true;
@@ -112,10 +149,6 @@ function enableRadios() {
   radioBtnsEl.forEach((radio) => {
     radio.disabled = false;
   });
-}
-
-function hideCorrect() {
-  answersSectionEl.classList.remove("quiz-section--correct");
 }
 
 function isAnswerValid() {
