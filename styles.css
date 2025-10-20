@@ -381,7 +381,8 @@ body {
 }
 
 .transition {
-  transition: opacity 1s ease, transform 1s ease;
+  --duration: 1s;
+  transition: opacity var(--duration) ease, transform var(--duration) ease;
 }
 
 .hidden-left {
@@ -423,6 +424,10 @@ body {
   }
 }
 
+.quiz-body {
+  display: grid;
+  grid-template-columns: 1fr;
+}
 @media (min-width: 90rem) {
   .quiz-body {
     display: grid;
@@ -435,8 +440,8 @@ body {
 .quiz-section--title-question,
 .quiz-section--title-score {
   margin-block-end: var(--sp-5);
-  grid-column: 1;
   grid-row: 1;
+  grid-column: 1;
 }
 @media (min-width: 48rem) {
   .quiz-section--title,
@@ -446,32 +451,58 @@ body {
     grid-template-rows: auto 1fr auto;
   }
 }
+@media (min-width: 90rem) {
+  .quiz-section--title,
+  .quiz-section--title-question,
+  .quiz-section--title-score {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
 
 .quiz-section--answers {
   margin-block-end: var(--sp-2);
-  grid-column: 2;
-  grid-row: 1;
+  grid-row: 2;
+  grid-column: 1;
 }
 @media (min-width: 48rem) {
   .quiz-section--answers {
     margin-block-end: var(--sp-4);
   }
 }
+@media (min-width: 90rem) {
+  .quiz-section--answers {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
 
 .quiz-section--score {
   margin-block-end: var(--sp-2);
-  grid-column: 2;
-  grid-row: 1;
+  grid-row: 2;
+  grid-column: 1;
 }
 @media (min-width: 48rem) {
   .quiz-section--score {
     margin-block-end: var(--sp-4);
   }
 }
+@media (min-width: 90rem) {
+  .quiz-section--score {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
 
 .quiz-section--categories {
-  grid-column: 2;
-  grid-row: 1;
+  grid-row: 2;
+  grid-column: 1;
+}
+@media (min-width: 90rem) {
+  .quiz-section--categories {
+    grid-column: 2;
+    grid-row: 1;
+  }
 }
 
 .title-logo-container {
@@ -712,8 +743,14 @@ body {
 }
 
 .btn--question {
-  grid-row: 2;
-  grid-column: 2/span 1;
+  grid-row: 3;
+  grid-column: 1;
+}
+@media (min-width: 90rem) {
+  .btn--question {
+    grid-row: 2;
+    grid-column: 2/span 1;
+  }
 }
 
 .icon-correct--answer {
@@ -796,8 +833,14 @@ li[role=radio]:focus-visible .quiz-item {
 }
 
 .btn--score {
-  grid-row: 2;
-  grid-column: 2/span 1;
+  grid-row: 3;
+  grid-column: 1;
+}
+@media (min-width: 90rem) {
+  .btn--score {
+    grid-row: 2;
+    grid-column: 2/span 1;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

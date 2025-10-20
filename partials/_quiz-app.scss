@@ -22,6 +22,9 @@
 }
 
 .quiz-body {
+  display: grid;
+  grid-template-columns: 1fr;
+
   @media (min-width: $bp-desktop) {
     display: grid;
     grid-template-columns: 1fr 49%;
@@ -42,8 +45,12 @@
     grid-template-rows: auto 1fr auto;
   }
 
-  grid-column: 1;
   grid-row: 1;
+  grid-column: 1;
+  @media (min-width: $bp-desktop) {
+    grid-column: 1;
+    grid-row: 1;
+  }
 }
 
 .quiz-section--answers {
@@ -53,8 +60,12 @@
     margin-block-end: var(--sp-4);
   }
 
-  grid-column: 2;
-  grid-row: 1;
+  grid-row: 2;
+  grid-column: 1;
+  @media (min-width: $bp-desktop) {
+    grid-column: 2;
+    grid-row: 1;
+  }
 }
 
 .quiz-section--score {
@@ -64,11 +75,20 @@
     margin-block-end: var(--sp-4);
   }
 
-  grid-column: 2;
-  grid-row: 1;
+  grid-row: 2;
+  grid-column: 1;
+  @media (min-width: $bp-desktop) {
+    grid-column: 2;
+    grid-row: 1;
+  }
 }
 
 .quiz-section--categories {
-  grid-column: 2;
-  grid-row: 1;
+  grid-row: 2;
+  grid-column: 1;
+
+  @media (min-width: $bp-desktop) {
+    grid-column: 2;
+    grid-row: 1;
+  }
 }

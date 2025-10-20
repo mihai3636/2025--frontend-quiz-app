@@ -120,7 +120,8 @@
 }
 
 .transition {
-  transition: opacity 1s ease, transform 1s ease;
+  --duration: 1s;
+  transition: opacity var(--duration) ease, transform var(--duration) ease;
 }
 
 .hidden-left {
