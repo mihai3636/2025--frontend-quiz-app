@@ -6,7 +6,9 @@ const questionTextEl = document.querySelector(".question-text");
 const progressBarEl = document.querySelector(".progress-bar");
 const radioBtnsEl = document.querySelectorAll(`input[type="radio"]`);
 
-const btnQuestion = document.querySelector(".btn--question");
+const btnQuestion = document.querySelector("#btnSubmit");
+const btnNext = document.querySelector("#btnNext");
+
 const btnErrorEl = document.querySelector(".btn-error");
 
 const answersSectionEl = document.querySelector(".quiz-section--answers");
@@ -15,7 +17,15 @@ let onCorrect = () => {
   console.log("Not yet implemented");
 };
 
+let onIncorrect = () => {
+  console.log("Not yet implemented (incorrect)");
+};
+
 let correctAnswer = "";
+
+btnNext.addEventListener("click", (ev) => {
+  console.log("Next clicked");
+});
 
 btnQuestion.addEventListener("click", (ev) => {
   let isValid = isAnswerValid();
@@ -23,6 +33,7 @@ btnQuestion.addEventListener("click", (ev) => {
     showError();
     return;
   }
+  hideError();
 
   disableRadios();
 
@@ -33,6 +44,7 @@ btnQuestion.addEventListener("click", (ev) => {
   }
 
   showIncorrect();
+  onIncorrect();
 });
 
 export function showQuestion({
@@ -40,10 +52,11 @@ export function showQuestion({
   index,
   total,
   onCorrect: onCorrectParam,
-  onIncorrect,
+  onIncorrect: onIncorrectParam,
 }) {
   correctAnswer = question.answer;
   onCorrect = onCorrectParam;
+  onIncorrect = onIncorrectParam;
   updateAnswers(question.options);
 
   unmarkTrueCorrectFromAll();
@@ -64,6 +77,7 @@ export function showQuestion({
   showSection(".quiz-section--title-question");
   showSection(".quiz-section--answers");
   showSection(".btn-container");
+  showBtnSubmit();
 }
 
 function updateQuestionIndex(newValue) {
@@ -168,4 +182,14 @@ function isAnswerCorrect() {
   }
 
   return false;
+}
+
+export function showBtnSubmit() {
+  btnQuestion.classList.remove("hidden");
+  btnNext.classList.add("hidden");
+}
+
+export function showBtnNext() {
+  btnQuestion.classList.add("hidden");
+  btnNext.classList.remove("hidden");
 }

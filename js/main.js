@@ -2,7 +2,7 @@ import { initTheme } from "./theme.js";
 import { initCategories } from "./category.js";
 import { loadQuizData } from "./dataService.js";
 import { initBackButtonListener } from "./navigator.js";
-import { showQuestion } from "./question.js";
+import { showQuestion, showBtnNext } from "./question.js";
 
 let questionIndex = -1;
 let score = 0;
@@ -27,12 +27,20 @@ function handleCategoryClicked(categoryName) {
     question: getQuestion(),
     index: 1,
     total: questions.length,
-    onCorrect: () => {
-      console.log("Correct answer");
-    },
-    onIncorrect: null,
+    onCorrect: handleCorrectAnswer,
+    onIncorrect: handleIncorrectAnswer,
   });
   history.pushState({ screen: "question" }, "", "");
+}
+
+function handleCorrectAnswer() {
+  console.log("Correct answer");
+  showBtnNext();
+}
+
+function handleIncorrectAnswer() {
+  console.log("Incorrect answer");
+  showBtnNext();
 }
 
 function getQuestion() {
