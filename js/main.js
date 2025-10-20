@@ -2,7 +2,14 @@ import { initTheme } from "./theme.js";
 import { initCategories } from "./category.js";
 import { loadQuizData } from "./dataService.js";
 import { initBackButtonListener } from "./navigator.js";
-import { showQuestion, showBtnNext } from "./question.js";
+import {
+  showQuestion,
+  showBtnNext,
+  initBtnNextClickListener,
+  initBtnQuestionClickListener,
+  updateQuestionData,
+  showBtnSubmit,
+} from "./question.js";
 
 let questionIndex = -1;
 let score = 0;
@@ -18,6 +25,29 @@ console.log(data);
 initBackButtonListener();
 initCategories(handleCategoryClicked);
 
+initBtnNextClickListener(handleNextClicked);
+initBtnQuestionClickListener({
+  onCorrect: handleCorrectAnswer,
+  onIncorrect: handleIncorrectAnswer,
+});
+
+function handleNextClicked() {
+  console.log("Next was clicked");
+  if (wasLastQuestion()) {
+    console.log("It was last question, doing nothing");
+    return;
+  }
+
+  updateQuestionData({
+    question: getQuestion(),
+    index: questionIndex + 1,
+    total: questions.length,
+    onCorrect: handleCorrectAnswer,
+    onIncorrect: handleIncorrectAnswer,
+  });
+  showBtnSubmit();
+}
+
 function handleCategoryClicked(categoryName) {
   questionIndex = 0;
   category = categoryName;
@@ -25,21 +55,22 @@ function handleCategoryClicked(categoryName) {
 
   showQuestion({
     question: getQuestion(),
-    index: 1,
+    index: questionIndex + 1,
     total: questions.length,
-    onCorrect: handleCorrectAnswer,
-    onIncorrect: handleIncorrectAnswer,
   });
   history.pushState({ screen: "question" }, "", "");
 }
 
 function handleCorrectAnswer() {
   console.log("Correct answer");
+  score += 1;
+  questionIndex += 1;
   showBtnNext();
 }
 
 function handleIncorrectAnswer() {
   console.log("Incorrect answer");
+  questionIndex += 1;
   showBtnNext();
 }
 
@@ -51,6 +82,10 @@ function initQuestions() {
   questions = data.find((item) => {
     return item.title.toLowerCase() === category;
   }).questions;
+}
+
+function wasLastQuestion() {
+  return questionIndex === questions.length;
 }
 
 /*

@@ -13,50 +13,24 @@ const btnErrorEl = document.querySelector(".btn-error");
 
 const answersSectionEl = document.querySelector(".quiz-section--answers");
 
-let onCorrect = () => {
-  console.log("Not yet implemented");
-};
-
-let onIncorrect = () => {
-  console.log("Not yet implemented (incorrect)");
-};
-
 let correctAnswer = "";
 
-btnNext.addEventListener("click", (ev) => {
-  console.log("Next clicked");
-});
+export function showQuestion({ question, index, total }) {
+  updateQuestionData({
+    question: question,
+    index: index,
+    total: total,
+  });
 
-btnQuestion.addEventListener("click", (ev) => {
-  let isValid = isAnswerValid();
-  if (!isValid) {
-    showError();
-    return;
-  }
-  hideError();
+  hideActiveSections();
+  showSection(".quiz-section--title-question");
+  showSection(".quiz-section--answers");
+  showSection(".btn-container");
+  showBtnSubmit();
+}
 
-  disableRadios();
-
-  if (isAnswerCorrect()) {
-    showCorrect();
-    onCorrect();
-    return;
-  }
-
-  showIncorrect();
-  onIncorrect();
-});
-
-export function showQuestion({
-  question,
-  index,
-  total,
-  onCorrect: onCorrectParam,
-  onIncorrect: onIncorrectParam,
-}) {
+export function updateQuestionData({ question, index, total }) {
   correctAnswer = question.answer;
-  onCorrect = onCorrectParam;
-  onIncorrect = onIncorrectParam;
   updateAnswers(question.options);
 
   unmarkTrueCorrectFromAll();
@@ -72,15 +46,10 @@ export function showQuestion({
   updateQuestionText(question.question);
   updateQuestionIndex(index);
   updateTotalQuestions(total);
-
-  hideActiveSections();
-  showSection(".quiz-section--title-question");
-  showSection(".quiz-section--answers");
-  showSection(".btn-container");
-  showBtnSubmit();
 }
 
 function updateQuestionIndex(newValue) {
+  console.log(`Updating question index: ${newValue}`);
   currentQuestionIndexEl.textContent = newValue;
 }
 
@@ -192,4 +161,32 @@ export function showBtnSubmit() {
 export function showBtnNext() {
   btnQuestion.classList.add("hidden");
   btnNext.classList.remove("hidden");
+}
+
+export function initBtnNextClickListener(onClick) {
+  btnNext.addEventListener("click", (ev) => {
+    onClick();
+  });
+}
+
+export function initBtnQuestionClickListener({ onCorrect, onIncorrect }) {
+  btnQuestion.addEventListener("click", (ev) => {
+    let isValid = isAnswerValid();
+    if (!isValid) {
+      showError();
+      return;
+    }
+    hideError();
+
+    disableRadios();
+
+    if (isAnswerCorrect()) {
+      showCorrect();
+      onCorrect();
+      return;
+    }
+
+    showIncorrect();
+    onIncorrect();
+  });
 }
