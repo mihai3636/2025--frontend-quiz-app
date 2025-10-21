@@ -1,4 +1,4 @@
-import { showSection, hideActiveSections } from "./common.js";
+import { showSection, hideActiveSections, capitalize } from "./common.js";
 
 const currentQuestionIndexEl = document.getElementById("currentQuestionIndex");
 const totalQuestionsEl = document.getElementById("totalQuestions");
@@ -12,6 +12,14 @@ const btnNext = document.querySelector("#btnNext");
 const btnErrorEl = document.querySelector(".btn-error");
 
 const answersSectionEl = document.querySelector(".quiz-section--answers");
+
+const headerEl = document.querySelector("header");
+
+const imgLogoIcon = headerEl.querySelector(".logo-icon");
+
+const logoContainerEl = headerEl.querySelector(".logo-container");
+
+const logoTitleTextEl = headerEl.querySelector(".title-text");
 
 let correctAnswer = "";
 
@@ -46,6 +54,26 @@ export function updateQuestionData({ question, index, total }) {
   updateQuestionText(question.question);
   updateQuestionIndex(index);
   updateTotalQuestions(total);
+}
+
+export function showQuestionLogo(iconPath, categorySelected) {
+  console.log(`Trying to show icon: ${iconPath}`);
+  imgLogoIcon.src = iconPath;
+  clearLogoStyles();
+  logoContainerEl.classList.add(`logo--${categorySelected}`);
+
+  let title =
+    categorySelected.length <= 4
+      ? categorySelected.toUpperCase()
+      : capitalize(categorySelected);
+
+  logoTitleTextEl.textContent = title;
+
+  headerEl.classList.remove("hidden-logo");
+}
+
+export function hideQuestionLogo() {
+  headerEl.classList.add("hidden-logo");
 }
 
 function updateQuestionIndex(newValue) {
@@ -188,5 +216,13 @@ export function initBtnQuestionClickListener({ onCorrect, onIncorrect }) {
 
     showIncorrect();
     onIncorrect();
+  });
+}
+
+function clearLogoStyles() {
+  logoContainerEl.classList.forEach((cls) => {
+    if (cls.startsWith("logo--")) {
+      logoContainerEl.classList.remove(cls);
+    }
   });
 }

@@ -517,6 +517,10 @@ body {
   }
 }
 
+.hidden-logo > .title-logo-container {
+  opacity: 0;
+}
+
 .logo-container {
   width: 2.5rem;
   height: 2.5rem;
@@ -541,7 +545,7 @@ body {
   background-color: var(--clr-green-1);
 }
 
-.logo--js {
+.logo--javascript {
   background-color: var(--clr-blue-1);
 }
 
@@ -582,6 +586,9 @@ body {
   .header {
     margin-block-end: var(--sp-7);
   }
+}
+.header.hidden-logo {
+  justify-content: end;
 }
 
 .theme-switcher {

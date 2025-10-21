@@ -12,6 +12,10 @@
   @media (min-width: $bp-desktop) {
     margin-block-end: var(--sp-7);
   }
+
+  &.hidden-logo {
+    justify-content: end;
+  }
 }
 
 .title-text {

@@ -13,6 +13,10 @@
   }
 }
 
+.hidden-logo > .title-logo-container {
+  opacity: 0;
+}
+
 .logo-container {
   width: toRem(40px);
   height: toRem(40px);
@@ -37,7 +41,7 @@
   background-color: var(--clr-green-1);
 }
 
-.logo--js {
+.logo--javascript {
   background-color: var(--clr-blue-1);
 }
 

@@ -10,12 +10,15 @@ import {
   initBtnQuestionClickListener,
   updateQuestionData,
   showBtnSubmit,
+  showQuestionLogo,
+  hideQuestionLogo,
 } from "./question.js";
 
 let questionIndex = -1;
 let score = 0;
 let questions = [];
 let category = "";
+let questionIconPath = "";
 
 history.pushState({ screen: "home" }, "", "");
 initTheme();
@@ -35,7 +38,6 @@ initBtnQuestionClickListener({
 function handleNextClicked() {
   console.log("Next was clicked");
   if (wasLastQuestion()) {
-    console.log("It was last question, doing nothing");
     showScore({ score: score, totalScore: questions.length });
     return;
   }
@@ -44,8 +46,6 @@ function handleNextClicked() {
     question: getQuestion(),
     index: questionIndex + 1,
     total: questions.length,
-    onCorrect: handleCorrectAnswer,
-    onIncorrect: handleIncorrectAnswer,
   });
   showBtnSubmit();
 }
@@ -55,24 +55,28 @@ function handleCategoryClicked(categoryName) {
   questionIndex = 0;
   category = categoryName;
   initQuestions();
+  initQuestionIconPath();
+
+  console.log("Category clicked: ", categoryName);
 
   showQuestion({
     question: getQuestion(),
     index: questionIndex + 1,
     total: questions.length,
   });
+
+  showQuestionLogo(questionIconPath, categoryName);
+
   history.pushState({ screen: "question" }, "", "");
 }
 
 function handleCorrectAnswer() {
-  console.log("Correct answer");
   score += 1;
   questionIndex += 1;
   showBtnNext();
 }
 
 function handleIncorrectAnswer() {
-  console.log("Incorrect answer");
   questionIndex += 1;
   showBtnNext();
 }
@@ -85,6 +89,12 @@ function initQuestions() {
   questions = data.find((item) => {
     return item.title.toLowerCase() === category;
   }).questions;
+}
+
+function initQuestionIconPath() {
+  questionIconPath = data.find((item) => {
+    return item.title.toLowerCase() === category;
+  }).icon;
 }
 
 function wasLastQuestion() {
