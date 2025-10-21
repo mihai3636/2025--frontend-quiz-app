@@ -2,6 +2,7 @@ import { initTheme } from "./theme.js";
 import { initCategories } from "./category.js";
 import { loadQuizData } from "./dataService.js";
 import { initBackButtonListener } from "./navigator.js";
+import { showScore } from "./score.js";
 import {
   showQuestion,
   showBtnNext,
@@ -35,6 +36,7 @@ function handleNextClicked() {
   console.log("Next was clicked");
   if (wasLastQuestion()) {
     console.log("It was last question, doing nothing");
+    showScore({ score: score, totalScore: questions.length });
     return;
   }
 
@@ -49,6 +51,7 @@ function handleNextClicked() {
 }
 
 function handleCategoryClicked(categoryName) {
+  score = 0;
   questionIndex = 0;
   category = categoryName;
   initQuestions();
