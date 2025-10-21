@@ -1,7 +1,7 @@
 export async function loadQuizData() {
   let data;
 
-  const response = await fetch("../data.json");
+  const response = await fetch("/js/data.json");
   console.log(response);
   if (!response.ok) {
     return [];
