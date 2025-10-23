@@ -7,6 +7,7 @@
   font-weight: var(--fw-medium);
   color: var(--clr-text);
 
+  min-height: var(--h-question-text);
   margin-block-end: var(--sp-3);
 
   @media (min-width: $bp-tablet) {
