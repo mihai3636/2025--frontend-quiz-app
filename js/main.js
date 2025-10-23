@@ -20,7 +20,6 @@ let questions = [];
 let category = "";
 let questionIconPath = "";
 
-history.pushState({ screen: "home" }, "", "");
 initTheme();
 
 let data = await loadQuizData();
@@ -36,7 +35,6 @@ initBtnQuestionClickListener({
 });
 
 function handleNextClicked() {
-  console.log("Next was clicked");
   if (wasLastQuestion()) {
     showScore({ score: score, totalScore: questions.length });
     return;
@@ -56,8 +54,6 @@ function handleCategoryClicked(categoryName) {
   category = categoryName;
   initQuestions();
   initQuestionIconPath();
-
-  console.log("Category clicked: ", categoryName);
 
   showQuestion({
     question: getQuestion(),
@@ -100,16 +96,3 @@ function initQuestionIconPath() {
 function wasLastQuestion() {
   return questionIndex === questions.length;
 }
-
-/*
-    TODOs:
-
-    find a way to make the back btn iterate through questions
-    when clicking category, load questions data
-    populate each question with its data
-    make the submit answer logic work
-    make the next question btn work
-    make the progress bar work
-    show the score screen when questions finished
-    make the play again btn show the home screen
-  */

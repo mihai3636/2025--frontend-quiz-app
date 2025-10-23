@@ -1,15 +1,14 @@
 let isDarkTheme = true;
-let checkboxThemeEl;
+let checkboxThemeEl = document.getElementById("checkboxTheme");
 
 export function initTheme() {
-  checkboxThemeEl = document.getElementById("checkboxTheme");
-
   checkboxThemeEl.addEventListener("change", () => {
     isDarkTheme = checkboxThemeEl.checked;
     applyTheme();
   });
 
   updateCheckboxThemeUi();
+  applyTheme(isDarkTheme);
 }
 
 function updateCheckboxThemeUi() {
@@ -18,8 +17,6 @@ function updateCheckboxThemeUi() {
   } else {
     checkboxThemeEl.checked = false;
   }
-
-  applyTheme(isDarkTheme);
 }
 
 function applyTheme() {
