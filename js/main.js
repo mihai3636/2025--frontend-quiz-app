@@ -2,7 +2,7 @@ import { initTheme } from "./theme.js";
 import { initCategories } from "./category.js";
 import { loadQuizData } from "./dataService.js";
 import { initBackButtonListener } from "./navigator.js";
-import { showScore } from "./score.js";
+import { showScore, initBtnPlayAgainClickListener } from "./score.js";
 import {
   showQuestion,
   showBtnNext,
@@ -13,6 +13,12 @@ import {
   showQuestionLogo,
   hideQuestionLogo,
 } from "./question.js";
+
+// TODO:
+/*
+  - add play again btn on score screen
+  - Navigate the entire app only using their keyboard
+*/
 
 let questionIndex = -1;
 let score = 0;
@@ -33,6 +39,7 @@ initBtnQuestionClickListener({
   onCorrect: handleCorrectAnswer,
   onIncorrect: handleIncorrectAnswer,
 });
+initBtnPlayAgainClickListener(handlePlayAgain);
 
 function handleNextClicked() {
   if (wasLastQuestion()) {
@@ -75,6 +82,10 @@ function handleCorrectAnswer() {
 function handleIncorrectAnswer() {
   questionIndex += 1;
   showBtnNext();
+}
+
+function handlePlayAgain() {
+  window.history.back();
 }
 
 function getQuestion() {
