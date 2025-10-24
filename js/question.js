@@ -76,6 +76,21 @@ export function hideQuestionLogo() {
   headerEl.classList.add("hidden-logo");
 }
 
+export function initAnswerKeyboardListener() {
+  document
+    .querySelector(".quiz-section--answers > .quiz-list")
+    .addEventListener("keydown", (ev) => {
+      console.log(ev.target, ev.currentTarget, ev.key);
+      if (ev.target === ev.currentTarget) return;
+
+      if (ev.key === "Enter" || ev.key === " ") {
+        ev.preventDefault();
+        console.log("Clicked", ev.target);
+        ev.target.querySelector('input[type="radio"]').checked = true;
+      }
+    });
+}
+
 function updateQuestionIndex(newValue) {
   console.log(`Updating question index: ${newValue}`);
   currentQuestionIndexEl.textContent = newValue;

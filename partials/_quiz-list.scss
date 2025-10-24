@@ -39,6 +39,11 @@
   .logo-container {
     flex-shrink: 0;
   }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: var(--bs-inline-orange);
+  }
 }
 
 .item-title {

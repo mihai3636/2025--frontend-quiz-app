@@ -12,13 +12,8 @@ import {
   showBtnSubmit,
   showQuestionLogo,
   hideQuestionLogo,
+  initAnswerKeyboardListener,
 } from "./question.js";
-
-// TODO:
-/*
-  - add play again btn on score screen
-  - Navigate the entire app only using their keyboard
-*/
 
 let questionIndex = -1;
 let score = 0;
@@ -33,6 +28,7 @@ console.log(data);
 
 initBackButtonListener();
 initCategories(handleCategoryClicked);
+initAnswerKeyboardListener();
 
 initBtnNextClickListener(handleNextClicked);
 initBtnQuestionClickListener({

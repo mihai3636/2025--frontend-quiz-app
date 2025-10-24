@@ -662,6 +662,10 @@ body {
 .quiz-item .logo-container {
   flex-shrink: 0;
 }
+.quiz-item:focus-visible {
+  outline: none;
+  box-shadow: var(--bs-inline-orange);
+}
 
 .item-title {
   color: var(--clr-text);

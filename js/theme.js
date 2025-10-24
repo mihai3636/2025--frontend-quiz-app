@@ -1,5 +1,8 @@
 let isDarkTheme = true;
-let checkboxThemeEl = document.getElementById("checkboxTheme");
+const checkboxThemeEl = document.getElementById("checkboxTheme");
+const labelThemeSwitcherEl = document.querySelector(
+  ".theme-switcher-btn-container"
+);
 
 export function initTheme() {
   checkboxThemeEl.addEventListener("change", () => {
@@ -7,16 +10,27 @@ export function initTheme() {
     applyTheme();
   });
 
+  labelThemeSwitcherEl.addEventListener(
+    "keydown",
+    handleLabelThemeSwitcherKeyPress
+  );
+
   updateCheckboxThemeUi();
   applyTheme(isDarkTheme);
 }
 
-function updateCheckboxThemeUi() {
-  if (isDarkTheme) {
-    checkboxThemeEl.checked = true;
-  } else {
-    checkboxThemeEl.checked = false;
+function handleLabelThemeSwitcherKeyPress(event) {
+  if (event.key === "Enter" || event.key === " ") {
+    event.preventDefault();
+    isDarkTheme = !isDarkTheme;
+    updateCheckboxThemeUi();
+    applyTheme();
   }
+}
+
+function updateCheckboxThemeUi() {
+  checkboxThemeEl.checked = isDarkTheme;
+  labelThemeSwitcherEl.setAttribute("aria-checked", isDarkTheme);
 }
 
 function applyTheme() {
